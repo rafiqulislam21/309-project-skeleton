@@ -16,6 +16,7 @@ var ArticleSchema = {
     required: 'Content required'
 
   },
+  
 
   user: {
     type: Schema.ObjectId,
