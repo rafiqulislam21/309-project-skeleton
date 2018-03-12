@@ -14,8 +14,9 @@ module.exports = function(app){
 	app.route('/api/articles/edit/:articleId')
 	.get(articles.read)
 	.put(users.requiresLogin, articles.update);
-	
-	app.route('/articles/all').get(articles.listView);
+
+app.route('/articles/all').get(articles.listView);
+app.route('/article/:articleId').get(articles.singleView);
 
 
 app.param('articleId', articles.articleByID);
