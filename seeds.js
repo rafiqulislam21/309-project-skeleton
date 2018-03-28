@@ -2,6 +2,7 @@
 
 var mongoose = require('mongoose');
 var Article = require('./models/Article.js');
+var Product = require('./models/Product.js');
 var User = require('./models/User.js');
 mongoose.connection.dropDatabase(error => {
   console.log('Database not dropped');

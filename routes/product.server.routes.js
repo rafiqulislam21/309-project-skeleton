@@ -20,7 +20,7 @@ app.route('/products/new').get(products.createView);
 app.route('/product/:productId').get(products.singleView);
 
 
-app.param('productId', products.articleByID);
+app.param('productId', products.productByID);
 
 
 }

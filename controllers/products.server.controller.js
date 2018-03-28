@@ -31,7 +31,7 @@ module.exports.listView = function(req, res) {
         res.render('./../public/views/product/all.ejs', {
           user: req.user || null,
           request: req,
-          articles: data
+          products: data
         });
       }
     });
@@ -102,7 +102,7 @@ module.exports.update = function(req, res) {
   	});
 };
 
-exports.articleByID = function(req, res, next, id) {
+exports.productByID = function(req, res, next, id) {
 	Product.findById(id).populate('user', 'email').exec(function(err, product) {
 		if (err) return next(err);
 		if (!product) return next(new Error('Failed to load product ' + id));
